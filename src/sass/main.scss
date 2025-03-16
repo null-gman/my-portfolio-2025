@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+    font-size: 10;
+    font-weight: 100;
+
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+
+
+html{
+    body{
+       height: 100vh;
+    }
+}
+
+$height-header-sec-px :60px;
+#header-sec{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: $height-header-sec-px;
+
+    background-color: red;
+
+    .page-scroll-bar{
+        width: 100%;
+        height: 10%;
+        progress{
+            
+            display: block;
+            height: 100%;
+            width: 100%;
+            appearance: none;
+            border: none;
+            outline: none;
+            $porg-bar:rgb(0, 0, 0);
+            $porg-val: rgb(31, 153, 33);
+
+
+            background-color:$porg-bar;//work on mozila 
+            &::-webkit-progress-bar {
+                /* style rules */
+                background-color:$porg-bar;
+            }
+            &::-webkit-progress-value {
+                /* style rules */
+                background-color:  $porg-val;
+            }
+            &::-moz-progress-bar {
+                /* style rules */
+                background-color:$porg-val;
+              }
+        }
+    }
+    .nav-bar{
+        height: 90%;
+        display: flex;
+        justify-content: space-evenly;
+
+        $gap-padingLeft :20px;
+        gap: $gap-padingLeft;
+        padding-inline: $gap-padingLeft;
+        /*gap will not efict the wall*/
+
+        align-items: center;
+        .greetings,.topic-btn{
+            font-size: 2rem;
+            font-weight: 700;
+            color: white;
+        }
+        .greetings{
+            margin-right: auto;
+        }
+
+        .topic-btn{
+            cursor: pointer;
+            background-color: black;
+            padding: 5px 10px ;
+            &:hover{
+                transform: translateX(2px) translateY(-2px);
+                box-shadow: -2px 2px 10px 3px rgba(255, 255, 255, 0.654);
+            }
+        }
+    }
+}

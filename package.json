@@ -1,0 +1,21 @@
+{
+  "name": "2025_1",
+  "version": "1.0.0",
+  "description": "",
+  "source": "public/index.html",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build --dist-dir ./build"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.13.3",
+    "parcel": "^2.13.3",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-icons": "^5.5.0",
+    "sass": "^1.85.1"
+  }
+}
