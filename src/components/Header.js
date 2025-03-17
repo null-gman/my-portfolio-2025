@@ -4,6 +4,7 @@ export default function Header({progValue})
 {       
     progValue = progValue ?? 0;
 
+
    
     return (
         <header id="header-sec">
