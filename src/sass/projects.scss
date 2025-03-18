@@ -1,0 +1,193 @@
+#projects-sec{
+    // background-color: red;
+    width: 100%;
+    height: fit-content;
+    
+
+    perspective: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    $cubeFaceSze : 20vw;
+    .cube {
+        width: $cubeFaceSze;
+        aspect-ratio: 1;
+        position: relative;
+        transform-style: preserve-3d;
+        // transition: transform .1s;
+   
+        .face{
+            user-select: none;
+            position: absolute;
+            width:$cubeFaceSze;
+            aspect-ratio: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+      
+        }
+        
+
+            /* Position each face of the cube */
+        .front {
+            background-color: #ff8a65; /* Coral */
+            transform: translateZ(calc( $cubeFaceSze / 2 ) );
+            /* Moves the front face 100px towards the viewer */
+        }
+        
+        .back {
+            background-color: #4fc3f7; /* Light Blue */
+            transform: rotateY(180deg) translateZ(calc( $cubeFaceSze / 2 ));
+            /* Rotates 180° around Y-axis and moves 100px forward */
+        }
+        
+        .right {
+            background-color: #81c784; /* Light Green */
+            transform: rotateY(90deg) translateZ(calc( $cubeFaceSze / 2 ));
+            /* Rotates 90° right around Y-axis and moves 100px forward */
+        }
+        
+        .left {
+            background-color: #9575cd; /* Purple */
+            transform: rotateY(-90deg) translateZ(calc( $cubeFaceSze / 2 ));
+            /* Rotates 90° left around Y-axis and moves 100px forward */
+        }
+        
+        .top {
+            background-color: #ffb74d; /* Orange */
+            transform: rotateX(90deg) translateZ(calc( $cubeFaceSze / 2 ));
+            /* Rotates 90° upward around X-axis and moves 100px forward */
+        }
+        
+        .bottom {
+            background-color: #f06292; /* Pink */
+            transform: rotateX(-90deg) translateZ(calc( $cubeFaceSze / 2 ));
+            /* Rotates 90° downward around X-axis and moves 100px forward */
+        }
+    }
+}
+
+
+
+@media screen and (max-width:700px) {
+    #projects-sec{
+        padding-block: 60px;
+
+        perspective: 100vw;
+  
+
+        $cubeFaceSze : 30vw;
+        .cube {
+            width: $cubeFaceSze;
+
+            .face{
+                width:$cubeFaceSze;
+                font-size: 24px;
+            }
+        
+                /* Position each face of the cube */
+            .front {
+
+                transform: translateZ(calc( $cubeFaceSze / 2 ) );
+                /* Moves the front face 100px towards the viewer */
+            }
+            
+            .back {
+
+                transform: rotateY(180deg) translateZ(calc( $cubeFaceSze / 2 ));
+                /* Rotates 180° around Y-axis and moves 100px forward */
+            }
+            
+            .right {
+     
+                transform: rotateY(90deg) translateZ(calc( $cubeFaceSze / 2 ));
+                /* Rotates 90° right around Y-axis and moves 100px forward */
+            }
+            
+            .left {
+          
+                transform: rotateY(-90deg) translateZ(calc( $cubeFaceSze / 2 ));
+                /* Rotates 90° left around Y-axis and moves 100px forward */
+            }
+            
+            .top {
+       
+                transform: rotateX(90deg) translateZ(calc( $cubeFaceSze / 2 ));
+                /* Rotates 90° upward around X-axis and moves 100px forward */
+            }
+            
+            .bottom {
+                transform: rotateX(-90deg) translateZ(calc( $cubeFaceSze / 2 ));
+                /* Rotates 90° downward around X-axis and moves 100px forward */
+            }
+        }
+    }
+    
+    
+}
+
+@media screen and (min-width:700px) {
+    #projects-sec{
+
+        padding-block: 90px;
+
+        perspective: 100vw;
+  
+
+        $cubeFaceSze : 15vw;
+        .cube {
+            width: $cubeFaceSze;
+
+            .face{
+   
+                width:$cubeFaceSze;
+        
+                font-size: 24px;
+
+            }
+            
+    
+                /* Position each face of the cube */
+            .front {
+
+                transform: translateZ(calc( $cubeFaceSze / 2 ) );
+                /* Moves the front face 100px towards the viewer */
+            }
+            
+            .back {
+
+                transform: rotateY(180deg) translateZ(calc( $cubeFaceSze / 2 ));
+                /* Rotates 180° around Y-axis and moves 100px forward */
+            }
+            
+            .right {
+     
+                transform: rotateY(90deg) translateZ(calc( $cubeFaceSze / 2 ));
+                /* Rotates 90° right around Y-axis and moves 100px forward */
+            }
+            
+            .left {
+          
+                transform: rotateY(-90deg) translateZ(calc( $cubeFaceSze / 2 ));
+                /* Rotates 90° left around Y-axis and moves 100px forward */
+            }
+            
+            .top {
+       
+                transform: rotateX(90deg) translateZ(calc( $cubeFaceSze / 2 ));
+                /* Rotates 90° upward around X-axis and moves 100px forward */
+            }
+            
+            .bottom {
+                transform: rotateX(-90deg) translateZ(calc( $cubeFaceSze / 2 ));
+                /* Rotates 90° downward around X-axis and moves 100px forward */
+            }
+        }
+    }
+    
+}

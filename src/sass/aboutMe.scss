@@ -1,0 +1,124 @@
+
+#aboutMe-sec{   
+    position: relative;
+    width: 100%;
+    height: fit-content;
+
+    // height: 100px;
+    .info{
+        color: rgb(255, 255, 255);
+        height: fit-content;
+        padding: 70px;
+        >.myName{
+            font-size: 50px;
+            font-weight: 800;
+        }
+
+        >.mytitle{
+            font-size: 20px;
+            font-weight: 300;
+        }
+        // background-color: brown;
+    }
+    .backGround{
+        position: absolute;
+        transform: translateY(-100%);
+        z-index: -1;
+        height: 100%;
+        width: 100%;
+        background-color: rgb(98, 0, 255);
+        overflow: hidden;
+       .shape{
+            position: absolute;
+            filter: blur(5px);
+            animation-timing-function: linear;
+
+            animation-iteration-count: infinite;
+       }
+        .circle{
+            width: 100px;
+            aspect-ratio: 1;
+            border-radius: 50%;
+            background-color: white;
+            animation-name: backGround-circle;
+            animation-duration:15s;
+        }
+        .square{
+            width: 100px;
+            aspect-ratio: 1;
+            animation-duration:9s;
+            background-color: white;
+            animation-name: backGround-square;
+        }
+        .triangle{
+            animation-duration:20s;
+            display: block;
+            width: 0;
+            height: 0;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-bottom: 100px solid #ffffff;
+
+            
+
+            animation-name: backGround-triangle;
+        }
+        .rectangular{
+            width: 200px;
+            aspect-ratio: 2/1;
+            animation-duration:20s;
+            background-color: rgb(16, 208, 182);
+            animation-name: backGround-rectangular;
+        }
+    }
+}
+
+  
+@keyframes  backGround-circle {
+
+        0% {
+          transform: translateX(-100%) translateY(50%);
+          
+        }
+        100%{
+            transform: translateX(calc( 100vw + 100%) ) translateY(calc( -10% ) );
+        }
+    
+}
+/*=========================================================*/
+@keyframes  backGround-square {
+
+    0% {
+      transform: translateX(-100%) translateY(120%);
+      
+    }
+    100%{
+        transform: translateX(calc( 100vw + 30%) ) translateY(calc( -150% ) );
+    }
+
+}
+
+/*=========================================================*/
+@keyframes  backGround-rectangular {
+
+    0% {
+      transform: translateX(-100%) translateY(0%);
+      
+    }
+    100%{
+        transform: translateX(calc( 100vw + 100%) ) translateY(calc( 350% ) );
+    }
+
+}
+/*=========================================================*/
+@keyframes  backGround-triangle {
+
+    0% {
+      transform: translateX(calc( 100vw + 100%)) translateY(calc(100% ));
+      
+    }
+    100%{
+        transform: translateX( -100% ) translateY(calc( 0) );
+    }
+
+}

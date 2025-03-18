@@ -1,0 +1,42 @@
+#footer-sec{
+
+    width: 100%;
+    padding: 10px 0px;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgb(214, 214, 214);
+
+    .copyRight{
+        display: flex;
+        font-size: 18px;
+        color: rgb(0, 0, 0);
+        p{
+            color: inherit;
+            font-size: inherit;
+            font-weight: 600;
+        }
+        a{
+            font-size: inherit;
+            color: inherit;
+            display: block;
+            text-decoration: none !important;
+            display: flex;
+            gap: 2px;
+            font-weight: 900;
+            &:hover{
+                color: rgb(34, 66, 120);
+            }
+            svg{
+                font-size: inherit;
+                color: inherit;
+            }
+
+        }
+
+
+
+    }
+}

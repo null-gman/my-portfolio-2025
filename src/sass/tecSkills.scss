@@ -1,0 +1,64 @@
+
+#TecSkills-sec-cards{
+    margin: auto;
+    width: 100%;
+    display: grid;
+    justify-content: center;
+
+    grid-template-columns: repeat( auto-fit, minmax(40px, 80px) );
+
+    .tech-card{
+        cursor: pointer;
+        overflow: hidden;
+        background-color: rgb(255, 255, 255);
+        aspect-ratio: 1;
+        
+
+
+        &:hover{
+            .tech-name{
+                
+                // transform: translateY(0%);
+                /* in component card */
+    
+            }
+        }
+        .tech-img{
+            user-select: none;
+            // pointer-events: none;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img{
+
+                width: 80%;
+
+                object-fit: contain;
+                object-position: center;
+            }
+        }
+
+        .tech-name{
+            transition: transform .2s;
+    
+            transform: translateY(-100%);
+            
+            background-color:rgba(98, 0, 255, 0.898);
+            // backdrop-filter: blur(3px);/*cause performans issues*/
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: 900;
+            font-size: 14px;
+            user-select: none;
+            // word-wrap: break-word;
+            word-break: break-all;
+            color: white;
+        }
+    }
+}
+
